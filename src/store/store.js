@@ -1,7 +1,7 @@
 import { createStore, combineReducers } from 'redux';
-import counterReducer from './counterReducer';
-import languageReducer from './languageReducer';
-import themeReducer from './themeReducer';
+import counterReducer from './counter';
+import languageReducer from './language';
+import themeReducer from './theme';
 
 const Reduc = combineReducers({
   usersData: counterReducer,

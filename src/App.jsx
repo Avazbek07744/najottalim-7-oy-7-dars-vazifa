@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addUser, removeUser, editUser } from './store/counterReducer';
-import { setLanguage } from './store/languageReducer';
-import { setTheme } from './store/themeReducer';
+import { addUser, removeUser, editUser } from './store/counter';
+import { setLanguage } from './store/language';
+import { setTheme } from './store/theme';
 
 function App() {
   const users = useSelector((state) => state.usersData.users);

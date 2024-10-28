@@ -21,7 +21,7 @@ const langue = {
     payload: user,
   });
   
-  const counterReducer = (state = langue, action) => {
+  const counter = (state = langue, action) => {
     switch (action.type) {
       case ADD_USER:
         return { ...state, users: [...state.users, action.payload] };
@@ -37,5 +37,5 @@ const langue = {
     }
   };
   
-  export default counterReducer;
+  export default counter;
   

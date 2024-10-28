@@ -9,7 +9,7 @@ const langue = {
     payload: language,
   });
   
-  const languageReducer = (state = langue, action) => {
+  const language = (state = langue, action) => {
     switch (action.type) {
       case SET_LANGUAGE:
         return { ...state, language: action.payload };
@@ -18,5 +18,5 @@ const langue = {
     }
   };
   
-  export default languageReducer;
+  export default language;
   

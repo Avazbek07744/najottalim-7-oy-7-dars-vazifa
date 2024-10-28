@@ -9,7 +9,7 @@ const lenague = {
     payload: theme,
   });
   
-  const themeReducer = (state = lenague, action) => {
+  const theme = (state = lenague, action) => {
     switch (action.type) {
       case SET_THEME:
         return { ...state, theme: action.payload };
@@ -18,5 +18,5 @@ const lenague = {
     }
   };
   
-  export default themeReducer;
+  export default theme;
   
