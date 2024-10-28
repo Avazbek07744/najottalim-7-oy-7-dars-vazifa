@@ -74,12 +74,12 @@ function App() {
   const themeClasses = theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800';
 
   return (
-    <div className={`app flex flex-col items-center p-4 ${themeClasses}`}>
+    <div className={`app flex flex-col items-center p-4 mt-40 ${themeClasses}`}>
       <h1 className="text-3xl font-bold mb-6">{language === 'en' ? 'User Management' : 'Управление пользователями'}</h1>
 
 
-      <div className="mb-4 flex gap-4">
-        <div>
+      <div className="mb-4 flex gap-10">
+        <div className='flex flex-col gap-5'>
           <label className="mr-2">{language === 'en' ? 'Select Language:' : 'Выберите язык:'}</label>
           <select
             value={language}
@@ -90,7 +90,7 @@ function App() {
             <option value="ru">Русский</option>
           </select>
         </div>
-        <div>
+        <div className='flex flex-col gap-5'>
           <label className="mr-2">{language === 'en' ? 'Theme:' : 'Тема:'}</label>
           <select
             value={theme}
@@ -116,10 +116,10 @@ function App() {
             <h2 className="text-xl font-semibold">{user.username}</h2>
             <p>{language === 'en' ? 'Email' : 'Электронная почта'}: {user.email}</p>
             <p>{language === 'en' ? 'Age' : 'Возраст'}: {user.age}</p>
-            <div className="flex gap-2 mt-4">
+            <div className="flex flex-col items-start gap-7 mt-4">
               <button
                 onClick={() => handleEditUser(user)}
-                className="px-3 py-1 bg-yellow-400 text-white rounded hover:bg-yellow-500"
+                className="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-500"
               >
                 {language === 'en' ? 'Edit' : 'Редактировать'}
               </button>
@@ -166,7 +166,7 @@ function App() {
             />
             <button
               onClick={handleSaveUser}
-              className="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+              className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
             >
               {language === 'en' ? 'Save' : 'Сохранить'}
             </button>
